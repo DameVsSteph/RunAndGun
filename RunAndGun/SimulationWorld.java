@@ -1,21 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class SplashScreen here.
+ * Write a description of class SimulationWorld here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SplashScreen extends World
+public class SimulationWorld extends World
 {
 
     /**
-     * Constructor for objects of class SplashScreen.
+     * Constructor for objects of class SimulationWorld.
      * 
      */
-    public SplashScreen()
+    public SimulationWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800,800,1); 
+        super(600, 560, 1); 
     }
 }
