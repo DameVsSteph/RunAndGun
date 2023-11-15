@@ -16,13 +16,10 @@ public class SplashScreen extends World
     public SplashScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 600, 1); 
+        super(500, 500, 1); 
     }
     public void act()
     {
-
-        
-        
         int timerValue = (int) (System.currentTimeMillis() - timeWelcomeScreenCreation)/1000;
 
         if (Greenfoot.isKeyDown("space"))
@@ -30,7 +27,6 @@ public class SplashScreen extends World
             Greenfoot.setWorld(new MainMenu()); 
 
         }
-
         if (System.currentTimeMillis() >= (timeWelcomeScreenCreation + (9 * 1000)))
         {
             Greenfoot.setWorld(new MainMenu()); 
