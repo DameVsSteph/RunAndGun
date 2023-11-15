@@ -1,22 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MainMenu here.
+ * Write a description of class Level2Complete here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MainMenu extends World
+public class Level2Complete extends World
 {
 
     /**
-     * Constructor for objects of class MainMenu.
+     * Constructor for objects of class Level2Complete.
      * 
      */
-    public MainMenu()
+    public Level2Complete()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 600, 1); 
-        showText("This will be our Main Menu screen\n with all the buttons",200,200);
+        super(600, 400, 1); 
     }
 }
