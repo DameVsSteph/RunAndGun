@@ -17,6 +17,28 @@ public class MainMenu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 600, 1); 
-        showText("This will be our Main Menu screen\n with all the buttons",200,200);
+
+        prepare();
     }
+    
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+
+        PlayButton playButton = new PlayButton();
+        addObject(playButton,308,145);
+        playButton.setLocation(308,145);
+        OptionButton optionButton = new OptionButton();
+        addObject(optionButton,310,320);
+        optionButton.setLocation(310,320);
+        TutorialButton tutorialButton = new TutorialButton();
+        addObject(tutorialButton,312,471);
+    }
+    
+    
 }
+    
+
