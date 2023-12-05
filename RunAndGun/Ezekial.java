@@ -75,7 +75,7 @@ public class Ezekial extends Actor
     
     
             
-                if (shootingtimer.millisElapsed() > 350 && Greenfoot.isKeyDown("x"))
+                if (shootingtimer.millisElapsed() > 100 && Greenfoot.isKeyDown("x"))
                 {
                     World world = getWorld();
                     world.addObject( new  Bullet(), getX()+60, getY()+20);
