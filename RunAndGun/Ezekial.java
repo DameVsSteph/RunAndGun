@@ -34,7 +34,8 @@ public class Ezekial extends Actor
                 if(isTouching(Road.class)){
         
         getWorld().removeObject(this);
-        
+        World mainMenu = new MainMenu();
+        Greenfoot.setWorld(mainMenu);
         
         }
         
@@ -84,14 +85,7 @@ public class Ezekial extends Actor
     
 }
 
-    public void transitionToWin(){
-        if (winTimer.millisElapsed()>60000)
-        {
-            
-
-        }
-        
-    }
+    
     
     
 }
