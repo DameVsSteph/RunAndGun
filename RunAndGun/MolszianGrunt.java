@@ -8,14 +8,14 @@ import java.util.List;
  */
 public class MolszianGrunt extends Actor
 {
-    
+    int hitPoint = 3;
     /**
      * Act - do whatever the MolszianGrunt wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        move(3);
+        move(2);
         List <Road> road90 = getObjectsAtOffset(-30, 0, Road.class);
         for(Road roads : road90){
              if(roads.straight == false && getRotation() == 0){
@@ -56,8 +56,12 @@ public class MolszianGrunt extends Actor
         
         
         
-        Dead();
         
+        if(isAtEdge()){
+          MainMenu mainMenu = new MainMenu();
+          Greenfoot.setWorld(mainMenu);
+        }
+        Dead();
     }
     
     
@@ -67,7 +71,13 @@ public class MolszianGrunt extends Actor
     
     Actor bullet = getOneIntersectingObject(Bullet.class);
     if(bullet != null){
-     getWorld().removeObject(this);
+        hitPoint--;
+        World world = getWorld();
+        if (world != null && hitPoint <= 0)
+        {
+            world.removeObject(this);
+        }
+         world.removeObject(bullet);
     }
     
     

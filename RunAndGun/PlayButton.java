@@ -14,7 +14,7 @@ public class PlayButton extends Actor
      */
     public void act()
     {
-        if(Greenfoot.mouseClicked(this)){
+        if(Greenfoot.mouseClicked(this) )   {
         transitionToGameWorld();
     }
     }
@@ -22,8 +22,8 @@ public class PlayButton extends Actor
     public void transitionToGameWorld(){
     
         
-        World Level1 = new Level1();
-        Greenfoot.setWorld(Level1);
+        World Level3 = new level3();
+        Greenfoot.setWorld(Level3);
         
         
         

@@ -68,8 +68,10 @@ public class level3 extends SimulationWorld
     }
 
     public void wave(){
-
-        if(worldTime % 20 == 0){
+        if(worldTime % 500 == 0){
+            addObject(new HeavyGunner(),1,90);
+        }
+        else if(worldTime % 20 == 0){
 
             addObject(new MolszianGrunt(), 1 ,90);
 

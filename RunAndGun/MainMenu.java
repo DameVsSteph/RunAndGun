@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainMenu extends World
 {
-
+double timeWelcomeScreenCreation = System.currentTimeMillis();
     /**
      * Constructor for objects of class MainMenu.
      * 
@@ -19,6 +19,7 @@ public class MainMenu extends World
         super(600, 600, 1); 
 
         prepare();
+        int timerValue = (int) (System.currentTimeMillis() - timeWelcomeScreenCreation)/1000;
     }
     
     /**
@@ -27,15 +28,16 @@ public class MainMenu extends World
      */
     private void prepare()
     {
-
         PlayButton playButton = new PlayButton();
-        addObject(playButton,308,145);
-        playButton.setLocation(308,145);
-        OptionButton optionButton = new OptionButton();
-        addObject(optionButton,310,320);
-        optionButton.setLocation(310,320);
+        addObject(playButton,298,302);
         TutorialButton tutorialButton = new TutorialButton();
-        addObject(tutorialButton,312,471);
+        addObject(tutorialButton,299,448);
+        OptionButton optionButton = new OptionButton();
+        addObject(optionButton,299,185);
+        optionButton.setLocation(303,227);
+        removeObject(optionButton);
+        OptionButton optionButton2 = new OptionButton();
+        addObject(optionButton2,294,159);
     }
     
     
