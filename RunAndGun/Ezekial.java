@@ -22,6 +22,7 @@ public class Ezekial extends Actor
     
     public SimpleTimer winTimer = new SimpleTimer();
     
+    
     /**
      * Act - do whatever the Ezekiel wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -34,8 +35,8 @@ public class Ezekial extends Actor
                 if(isTouching(Road.class)){
         
         getWorld().removeObject(this);
-        World mainMenu = new MainMenu();
-        Greenfoot.setWorld(mainMenu);
+        World lostWorld = new LostWorld();
+        Greenfoot.setWorld(lostWorld);
         
         }
         
@@ -74,7 +75,7 @@ public class Ezekial extends Actor
         
     
                 
-                if (shootingtimer.millisElapsed() > 100 && Greenfoot.isKeyDown("z"))
+                if (shootingtimer.millisElapsed() > 50 && Greenfoot.isKeyDown("z"))
                 {
                     World world = getWorld();
                     Bullet bullet = new  Bullet();
@@ -93,7 +94,9 @@ public class Ezekial extends Actor
     
 }
 
-    
-    
-    
+
 }
+    
+   
+    
+

@@ -19,6 +19,7 @@ public class level3 extends SimulationWorld
             {0,0,0,0,0,0,0,0,0,1,0},
             {0,0,0,0,0,0,0,0,0,1,0},
         };
+        public SimpleTimer winTimer = new SimpleTimer();
 
     int worldTime;                      
     private GreenfootSound backgroundMusic = new GreenfootSound("Adrenaline.mp3");
@@ -35,11 +36,16 @@ public class level3 extends SimulationWorld
         Level3();
         prepare();
     }
-
+    
+    
+    
+    
+    
     public void act(){
         worldTime++;
         wave();
         backgroundMusic.playLoop();
+        Win();
         
     }
     private void Level3(){
@@ -64,7 +70,7 @@ public class level3 extends SimulationWorld
             }
 
         }
-
+        
     }
 
     public void wave(){
@@ -87,5 +93,11 @@ public class level3 extends SimulationWorld
         Ezekial ezekial = new Ezekial();
         addObject(ezekial,389,329);
     }
-
+   public void Win(){
+     if(winTimer.millisElapsed() > 60000){
+        
+        World winWorld = new WinWorld();
+        Greenfoot.setWorld(winWorld);
+        }
+}
 }

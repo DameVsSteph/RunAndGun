@@ -9,6 +9,7 @@ import java.util.List;
 public class MolszianGrunt extends Actor
 {
     int hitPoint = 3;
+    int kills;
     /**
      * Act - do whatever the MolszianGrunt wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -76,6 +77,7 @@ public class MolszianGrunt extends Actor
         if (world != null && hitPoint <= 0)
         {
             world.removeObject(this);
+            kills++;
         }
          world.removeObject(bullet);
     }
